@@ -34,6 +34,1478 @@ workflows:
     - sign-apk@1:
         run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
     - deploy-to-bitrise-io@2: {}
+  build_apk1:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk2:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk3:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk4:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk5:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk6:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk7:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk8:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk9:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk10:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk11:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk12:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk13:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk14:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk15:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk16:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk17:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk18:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk19:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk20:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk21:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk22:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk23:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk24:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk25:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk26:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk27:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk28:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk29:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk30:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk31:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk32:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk33:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk34:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk35:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk36:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk37:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk38:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk39:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk40:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk41:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk42:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk43:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk44:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk45:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
+  build_apk46:
+    summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
+    description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
+    steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@8: {}
+      - install-missing-android-tools@3:
+          inputs:
+            - gradlew_path: $PROJECT_LOCATION/gradlew
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: $PROJECT_LOCATION/$MODULE/build.gradle
+      - android-lint@0:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-unit-test@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - variant: $VARIANT
+            - cache_level: none
+      - android-build@1:
+          inputs:
+            - project_location: $PROJECT_LOCATION
+            - module: $MODULE
+            - variant: $VARIANT
+            - cache_level: none
+      - sign-apk@1:
+          run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
+      - deploy-to-bitrise-io@2: {}
   run_tests:
     summary: Run your Android unit tests and get the test report.
     description: The workflow will first clone your Git repository, cache your Gradle dependencies, install Android tools, run your Android unit tests and save the test report.
